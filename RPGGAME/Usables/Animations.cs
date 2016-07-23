@@ -7,9 +7,8 @@ using System.Text;
 
 namespace RPGGAME
 {
-    class Animations
+    public class Animations
     {
-
 
         Texture2D texture;
         double timeElapsed;
@@ -18,6 +17,7 @@ namespace RPGGAME
 
         public float FramePerSecond
         {
+           
             set { timeToUpdate = 1f / value; }
         }
         string CurrentAnimation;
@@ -28,6 +28,7 @@ namespace RPGGAME
 
         public void AddAnimation(string Name, int frames, int startFrame, int Ypos, int Width, int Height)
         {
+            
             Rectangle[] rectangles = new Rectangle[frames];
 
             for (int i = 0; i < frames; i++)
