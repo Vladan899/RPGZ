@@ -38,11 +38,10 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="BaseScreen.cs" />
+    <Compile Include="DebugScreen.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="Input.cs" />
-    <Compile Include="PlayerManager.cs" />
-    <Compile Include="Players\PlayerBase\EntityBase.cs" />
-    <Compile Include="Players\Player.cs" />
+    <Compile Include="ScreenManager.cs" />
     <Compile Include="Usables\Animations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
