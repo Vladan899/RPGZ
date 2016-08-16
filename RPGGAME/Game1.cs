@@ -10,7 +10,10 @@ namespace RPGHAME
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        public static SpriteBatch spriteBatch;
+        public static GameTime gt;
+
+        public static bool WindowFocused { get; internal set; }
 
         public Game1()
         {
