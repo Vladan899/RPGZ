@@ -56,7 +56,7 @@ namespace RPGHAME
             }
             NewScreens.Clear();
 
-
+            //asd
             //RESET DEBUG SCREEN TO TOP OF THE LIST
             Screens.Remove(Debug);
             Screens.Add(Debug);
