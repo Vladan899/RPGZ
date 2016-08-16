@@ -10,6 +10,7 @@ namespace RPGGAME.Usables
 {
     class MenuEntry
     {
+
         string[] EntriyText;
         bool[] enabled;
         bool[] visible;

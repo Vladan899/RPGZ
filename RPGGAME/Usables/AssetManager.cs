@@ -9,6 +9,7 @@ namespace RPGHAME
 {
     class AssetManager
     {
+
         static ContentManager CM;
         static AssetManager instance;
         public static AssetManager GetInstance()

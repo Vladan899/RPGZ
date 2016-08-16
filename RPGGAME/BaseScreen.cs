@@ -11,6 +11,7 @@ namespace RPGHAME
         public bool CanInteract;
         public string Name;
 
+
         public State ScreenState { get; internal set; }
 
         public BaseScreen()

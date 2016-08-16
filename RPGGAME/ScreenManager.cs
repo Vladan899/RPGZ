@@ -78,7 +78,7 @@ namespace RPGHAME
             {
                 Debug.FocusScreen = "Focused Screen: ";
             }
-
+            //
             //HANDLE INPUT FOR FOCUSED SCREEN
             foreach (var screen in Screens)
             {

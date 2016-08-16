@@ -9,6 +9,7 @@ namespace RPGHAME
 {
     public class Input
     {
+
         static KeyboardState CurrentKeyState;
 
         static KeyboardState LastKeyState;

@@ -31,6 +31,7 @@ namespace RPGHAME
 
         public override void HandleInput()
         {
+
             base.HandleInput();
 
             if (Input.KeyPressed(Keys.F1))

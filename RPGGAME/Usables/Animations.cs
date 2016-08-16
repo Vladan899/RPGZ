@@ -10,6 +10,7 @@ namespace RPGHAME
     public class Animations
     {
 
+
         Texture2D texture;
         double timeElapsed;
         float timeToUpdate;
