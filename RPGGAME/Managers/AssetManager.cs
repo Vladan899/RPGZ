@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RPGHAME
+namespace RPGGAME
 {
     class AssetManager
     {
@@ -37,10 +37,10 @@ namespace RPGHAME
         {
             CM = content;
 
-            AddFont("Arial_8");
-            AddFont("Verdana_16");
-            AddFont("Metamorphous_16");
-            AddTexture("DirtTile");
+            AddFont("Arial_16");
+            //AddFont("Verdana_16");
+            //AddFont("Metamorphous_16");
+            //AddTexture("DirtTile");
 
 
 

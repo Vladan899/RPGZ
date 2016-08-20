@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RPGHAME
+namespace RPGGAME
 {
 #if WINDOWS || LINUX
     /// <summary>
@@ -8,7 +8,7 @@ namespace RPGHAME
     /// </summary>
     public static class Program
     {
-        /
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

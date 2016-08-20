@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace RPGHAME
+namespace RPGGAME
 {
     /// <summary>
     /// This is the main type for your game.
@@ -13,8 +13,10 @@ namespace RPGHAME
         public static SpriteBatch spriteBatch;
         public static GameTime gt;
 
-        public static bool WindowFocused { get; internal set; }
+        public static bool WindowFocused { get; set; }
 
+        ScreenManager screens;
+        DrawColoredStrings Fonts;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -30,7 +32,7 @@ namespace RPGHAME
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            
             base.Initialize();
         }
 
@@ -38,12 +40,24 @@ namespace RPGHAME
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
         /// </summary>
+        /// 
+        Vector2 Pos = new Vector2(100, 100);
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            AssetManager.GetInstance().LoadStuff(Content);
 
-            // TODO: use this.Content to load your game content here
+
+            screens = new ScreenManager();
+            ItemFactory factory = new ItemFactory();
+
+           // Fonts = new DrawColoredStrings("Arial_16", new string[] { "Name: ", "AC: " }, new string[] {factory.Items[0].Name, factory.Items[0]. }, new Color[] { Color.White, Color.Red }, new Vector2(100, 100));
+
+          
+                
+                
+            
         }
 
         /// <summary>
@@ -78,7 +92,13 @@ namespace RPGHAME
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            spriteBatch.Begin(SpriteSortMode.BackToFront,BlendState.AlphaBlend,SamplerState.PointClamp,DepthStencilState.None,RasterizerState.CullNone,null,null);
+
+
+            Fonts.DrawList(spriteBatch);
+            spriteBatch.End();
+        
+
 
             base.Draw(gameTime);
         }

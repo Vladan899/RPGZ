@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RPGGAME.Usables
+namespace RPGGAME
 {
     class MenuEntry
     {
@@ -20,7 +20,6 @@ namespace RPGGAME.Usables
         int MenuSelect;
         int width;
         int height;
-        Rectangle Centar;
         public int menuSelect
         {
             get { return MenuSelect; }
@@ -43,7 +42,8 @@ namespace RPGGAME.Usables
 
             font = AssetManager.GetInstance().font[File];
             EntriyText = text;
-            enabled = Enabled;
+            this.enabled = Enabled;
+            this.visible = Visible;
             MesureString(File);
         }
 
@@ -117,7 +117,7 @@ namespace RPGGAME.Usables
                 {
                     sp.DrawString(font, EntriyText[i], pos, Color.White);
                 }
-                else if (enabled[i] == false && visible[i] == true)
+                else if (enabled[i] == false && visible[i] == false)
                 {
                     sp.DrawString(font, EntriyText[i], pos, Color.Gray);
                 }

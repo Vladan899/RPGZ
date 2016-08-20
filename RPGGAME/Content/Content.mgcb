@@ -11,7 +11,11 @@
 #-------------------------------- References --------------------------------#
 
 
-
-
 #---------------------------------- Content ---------------------------------#
+
+#begin Arial_16.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Arial_16.spritefont
 

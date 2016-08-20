@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RPGHAME
+namespace RPGGAME
 {
     public class Animations
     {
@@ -26,7 +26,10 @@ namespace RPGHAME
         Dictionary<string, Rectangle[]> zAnimations = new Dictionary<string, Rectangle[]>();
 
 
-
+        public Animations(string textures)
+        {
+            texture = AssetManager.GetInstance().texture[textures];
+        }
         public void AddAnimation(string Name, int frames, int startFrame, int Ypos, int Width, int Height)
         {
             
