@@ -50,7 +50,7 @@ namespace RPGGAME
 
 
             screens = new ScreenManager();
-            ItemFactory factory = new ItemFactory();
+
 
            // Fonts = new DrawColoredStrings("Arial_16", new string[] { "Name: ", "AC: " }, new string[] {factory.Items[0].Name, factory.Items[0]. }, new Color[] { Color.White, Color.Red }, new Vector2(100, 100));
 

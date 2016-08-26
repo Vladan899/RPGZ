@@ -42,14 +42,11 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ItemFactory\Base Item\Armor\Interfaces\ArmorRequirments.cs" />
-    <Compile Include="ItemFactory\Base Item\Armor\Interfaces\ItemTypeTier.cs" />
-    <Compile Include="ItemFactory\Base Item\BaseItem.cs" />
-    <Compile Include="IAttributes.cs" />
-    <Compile Include="ItemFactory\ItemFactory.cs" />
-    <Compile Include="LegendaryPotions.cs" />
-    <Compile Include="IEntity.cs" />
+    <Compile Include="BaseItems.cs" />
+    <Compile Include="IEntity\Barbarian.cs" />
+    <Compile Include="IEntity\IAttributes.cs" />
     <Compile Include="Screens\BaseScreen\BaseScreen.cs" />
+    <Compile Include="Slot\Slot.cs" />
     <Compile Include="Usables\DrawColoredStrings.cs" />
     <Compile Include="Screens\MainMenu.cs" />
     <Compile Include="Managers\ScreenManager.cs" />
@@ -60,6 +57,8 @@
     <Compile Include="Managers\AssetManager.cs" />
     <Compile Include="Usables\Input.cs" />
     <Compile Include="Usables\MenyEntry.cs" />
+    <Compile Include="Weapon.cs" />
+    <Compile Include="IWeaponStats.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
