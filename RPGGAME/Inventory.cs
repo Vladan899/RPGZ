@@ -12,8 +12,8 @@ namespace RPGGAME
     public class Inventory
     {
 
-        int Wight;
-        int Height;
+        int slotWight;
+        int slotHeight;
         int Collums;
         int Rows;
         int SelectedX, SelectedY;
@@ -21,12 +21,13 @@ namespace RPGGAME
 
         BaseItem[,] items;
         Backpack Test;
+        Vector2 pos;
 
-
-        public Inventory(Backpack Bpack, int Collums, int Rows, int SlotWidth, int SlothHeight)
+        public Inventory(Backpack Bpack, int Collums, int Rows, int SlotWidth, int SlothHeight,string FileFont, Vector2 Pos)
         {
-            Wight = SlotWidth;
-            Height = SlothHeight;
+            pos = Pos;
+            slotWight = SlotWidth;
+            slotHeight = SlothHeight;
             Test = Bpack;
             this.Collums = Collums;
             this.Rows = Rows;
@@ -100,15 +101,19 @@ namespace RPGGAME
                 {
                     if (SelectedX == X && SelectedY == Y)
                     {
-                        spriteBatch.Draw(AssetManager.GetInstance().texture["Slot"], new Rectangle(0 + (X * (Wight + 2 )), 0 + (Y * (Height + 2)), Wight, Height), Color.SlateBlue);
+                        spriteBatch.Draw(AssetManager.GetInstance().texture["Slot"], new Rectangle((int)pos.X + (X * (slotWight + 2 )), (int)pos.Y + (Y * (slotHeight + 2)), slotWight, slotHeight), Color.SlateBlue);
                     }
                     else
                     {
-                        spriteBatch.Draw(AssetManager.GetInstance().texture["Slot"], new Rectangle(0 + (X * (Wight + 2)), 0 + (Y * (Height + 2)), Wight, Height), Color.White);
+                        spriteBatch.Draw(AssetManager.GetInstance().texture["Slot"], new Rectangle((int)pos.X + (X * (slotWight + 2)), (int)pos.Y + (Y * (slotHeight + 2)), slotWight, slotHeight), Color.White);
                     }
                     if (items[X, Y] != null)
                     {
-                        spriteBatch.Draw(items[X, Y].ItemTexture, new Rectangle(0 + (X * (Wight)), 0 + (Y * (Wight + 2 )), Wight, Height), items[X, Y].SourceRectangle, Color.White);
+                        spriteBatch.Draw(items[X, Y].ItemTexture, new Rectangle((int)pos.X + (X * (slotWight)), (int)pos.Y + (Y * (slotHeight )), slotWight/2, slotHeight/2), items[X, Y].SourceRectangle, Color.White);
+                        if(items[X,Y].Item_Count > 0)
+                        {
+                            spriteBatch.DrawString(AssetManager.GetInstance().font["Arial_16"], items[X, Y].Item_Count.ToString(), new Vector2(0, 0 ), Color.Yellow);
+                        }
                     }
 
 
@@ -129,7 +134,7 @@ namespace RPGGAME
                        items[x,y] = BPack.Items[itemIndex];
                         itemIndex++;
                     }
-                    break;
+                    
                 }
             }
         }

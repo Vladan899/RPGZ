@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>D:/Visual Studio Project/RPGGAME/RPGGAME/Content/Arial_16.spritefont</SourceFile>
-  <SourceTime>2016-08-20T02:07:42.1066051+02:00</SourceTime>
+  <SourceTime>2016-11-30T05:48:51.6752044+01:00</SourceTime>
   <DestFile>D:/Visual Studio Project/RPGGAME/RPGGAME/Content/bin/Windows/Arial_16.xnb</DestFile>
-  <DestTime>2016-08-20T02:07:43.7135117+02:00</DestTime>
+  <DestTime>2016-11-30T06:00:33.8282712+01:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2016-03-30T08:36:08+02:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

@@ -51,7 +51,7 @@ namespace RPGGAME
             spriteBatch = new SpriteBatch(GraphicsDevice);
             AssetManager.GetInstance().LoadStuff(Content);
 
-            inv = new Inventory(new PlayerBackPack(),4,2,64,64); 
+            inv = new Inventory(new PlayerBackPack(),4,2,64,64,"",new Vector2(50,50)); 
         }
 
         /// <summary>

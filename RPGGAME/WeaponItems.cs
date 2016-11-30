@@ -17,10 +17,7 @@ namespace RPGGAME
      
         public WeaponsItems() 
         {
-            Item_Name = "Null";
-            ItemTexture = AssetManager.GetInstance().texture["baihu"];
-            SourceRectangle = new Rectangle(0, 0, 64, 64);
-            Max_StackSize = 1;
+      
 
 
         }
