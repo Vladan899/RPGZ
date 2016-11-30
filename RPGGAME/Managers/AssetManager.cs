@@ -40,7 +40,9 @@ namespace RPGGAME
             AddFont("Arial_16");
             //AddFont("Verdana_16");
             //AddFont("Metamorphous_16");
-            //AddTexture("DirtTile");
+            AddTexture("Slot");
+            AddTexture("baihu");
+
 
 
 

@@ -12,8 +12,7 @@ namespace RPGGAME
     {
         
         Color[] StringColor;
-        String[] Strings;
-        string[] SubString;
+        string[] Strings;
         Vector2 Position;
         SpriteFont Font;
 
@@ -26,11 +25,10 @@ namespace RPGGAME
         /// <param name="strings"></param>
         /// <param name="colors"></param>
         /// <param name="position"></param>
-        public DrawColoredStrings(string font,string[] strings, string[] substring, Color[]  sec, Vector2 position)
+        public DrawColoredStrings(string font,string[] strings, Color[]  sec, Vector2 position)
         {
            
             Font = AssetManager.GetInstance().font[font];
-            SubString = substring;
             StringColor = sec;
             Position = position;
             Strings = strings;
@@ -53,7 +51,7 @@ namespace RPGGAME
             Vector2 offset = Vector2.Zero;
             for (int i = 0; i < Strings.Length; i++)
             {
-                    spriteBatch.DrawString(Font, Strings[i] + SubString[i], Position + offset, StringColor[i]);
+                    spriteBatch.DrawString(Font, Strings[i] , Position + offset, StringColor[i]);
                     offset.Y +=20;
                 
             }

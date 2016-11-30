@@ -42,13 +42,13 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BaseItems.cs" />
-    <Compile Include="IEntity\Barbarian.cs" />
-    <Compile Include="IEntity\IAttributes.cs" />
-    <Compile Include="Screens\BaseScreen\BaseScreen.cs" />
-    <Compile Include="Slot\Slot.cs" />
+    <Compile Include="ArmorItems.cs" />
+    <Compile Include="Backpack.cs" />
+    <Compile Include="BaseItem.cs" />
+    <Compile Include="Inventory.cs" />
+    <Compile Include="PlayerBackPack.cs" />
+    <Compile Include="StatAttribute.cs" />
     <Compile Include="Usables\DrawColoredStrings.cs" />
-    <Compile Include="Screens\MainMenu.cs" />
     <Compile Include="Managers\ScreenManager.cs" />
     <Compile Include="Main\Game1.cs" />
     <Compile Include="Usables\Animations.cs" />
@@ -57,8 +57,7 @@
     <Compile Include="Managers\AssetManager.cs" />
     <Compile Include="Usables\Input.cs" />
     <Compile Include="Usables\MenyEntry.cs" />
-    <Compile Include="Weapon.cs" />
-    <Compile Include="IWeaponStats.cs" />
+    <Compile Include="WeaponItems.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -68,6 +67,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\baihu.dds" />
+    <Content Include="Content\Gui1.jpg" />
+    <Content Include="Content\Slot.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>

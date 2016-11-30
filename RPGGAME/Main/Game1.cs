@@ -1,6 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace RPGGAME
 {
@@ -10,13 +13,10 @@ namespace RPGGAME
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
-        public static SpriteBatch spriteBatch;
-        public static GameTime gt;
+        SpriteBatch spriteBatch;
+        Inventory inv;
 
-        public static bool WindowFocused { get; set; }
-
-        ScreenManager screens;
-        DrawColoredStrings Fonts;
+        
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -41,23 +41,17 @@ namespace RPGGAME
         /// all of your content.
         /// </summary>
         /// 
-        Vector2 Pos = new Vector2(100, 100);
+   
+
+        public static bool WindowFocused { get; internal set; }
+
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             AssetManager.GetInstance().LoadStuff(Content);
 
-
-            screens = new ScreenManager();
-
-
-           // Fonts = new DrawColoredStrings("Arial_16", new string[] { "Name: ", "AC: " }, new string[] {factory.Items[0].Name, factory.Items[0]. }, new Color[] { Color.White, Color.Red }, new Vector2(100, 100));
-
-          
-                
-                
-            
+            inv = new Inventory(new PlayerBackPack(),4,2,64,64); 
         }
 
         /// <summary>
@@ -73,16 +67,19 @@ namespace RPGGAME
         /// Allows the game to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        /// <param name="gameTime">Provides a snapshot of timin
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+           
+ 
+            WindowFocused = this.IsActive;
 
-            // TODO: Add your update logic here
-
+            inv.Update(gameTime);
             base.Update(gameTime);
+        
         }
+
+
 
         /// <summary>
         /// This is called when the game should draw itself.
@@ -91,16 +88,14 @@ namespace RPGGAME
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            spriteBatch.Begin(SpriteSortMode.BackToFront,BlendState.AlphaBlend,SamplerState.PointClamp,DepthStencilState.None,RasterizerState.CullNone,null,null);
-
-
-            Fonts.DrawList(spriteBatch);
+            
+            spriteBatch.Begin(SpriteSortMode.BackToFront,BlendState.AlphaBlend, SamplerState.PointClamp,DepthStencilState.None,RasterizerState.CullNone,null,null);
+            inv.Draw(spriteBatch);
+            
             spriteBatch.End();
-        
-
-
             base.Draw(gameTime);
         }
     }
+
+    
 }

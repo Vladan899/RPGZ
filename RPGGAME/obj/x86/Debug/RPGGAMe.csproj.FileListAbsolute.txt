@@ -25,3 +25,7 @@ D:\Visual Studio Project\RPGGAME\RPGGAME\bin\Windows\Debug\SharpDX.Direct2D1.xml
 D:\Visual Studio Project\RPGGAME\RPGGAME\bin\Windows\Debug\SharpDX.XInput.xml
 D:\Visual Studio Project\RPGGAME\RPGGAME\bin\Windows\Debug\SharpDX.RawInput.xml
 D:\Visual Studio Project\RPGGAME\RPGGAME\bin\Windows\Debug\SharpDX.Direct3D9.xml
+D:\Visual Studio Project\RPGGAME\RPGGAME\bin\Windows\Debug\Content\Slot.xnb
+D:\Visual Studio Project\RPGGAME\RPGGAME\bin\Windows\Debug\Content\Source.xnb
+D:\Visual Studio Project\RPGGAME\RPGGAME\bin\Windows\Debug\Content\baihu.xnb
+D:\Visual Studio Project\RPGGAME\RPGGAME\bin\Windows\Debug\Content\Gui1.xnb

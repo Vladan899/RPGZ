@@ -11,7 +11,8 @@ namespace RPGGAME
     {
 
 
-        Texture2D texture;
+        public Texture2D spriteTexture;
+
         double timeElapsed;
         float timeToUpdate;
         int currentFrame;
@@ -26,10 +27,15 @@ namespace RPGGAME
         Dictionary<string, Rectangle[]> zAnimations = new Dictionary<string, Rectangle[]>();
 
 
-        public Animations(string textures)
+        public Animations(string FileName)
         {
-            texture = AssetManager.GetInstance().texture[textures];
+            spriteTexture = AssetManager.GetInstance().texture[FileName];
         }
+        public Animations(Texture2D FileName)
+        {
+            spriteTexture = FileName;
+        }
+
         public void AddAnimation(string Name, int frames, int startFrame, int Ypos, int Width, int Height)
         {
             
@@ -45,7 +51,7 @@ namespace RPGGAME
 
         public void UpdateAnimation(GameTime gt, Rectangle BBox, Vector2 pos)
         {
-            BBox = new Rectangle((int)pos.X, (int)pos.Y, texture.Width, texture.Height);
+            BBox = new Rectangle((int)pos.X, (int)pos.Y, spriteTexture.Width, spriteTexture.Height);
 
             timeElapsed += gt.ElapsedGameTime.TotalSeconds;
             if (timeElapsed > timeToUpdate)
@@ -64,7 +70,7 @@ namespace RPGGAME
 
         public void Draw(SpriteBatch sp, Vector2 position)
         {
-            sp.Draw(texture, position, zAnimations[CurrentAnimation][currentFrame], Color.White);
+            sp.Draw(spriteTexture, position, zAnimations[CurrentAnimation][currentFrame], Color.White);
         }
 
 

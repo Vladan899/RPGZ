@@ -5,5 +5,8 @@
   <Config />
   <SourceFiles>
     <File>D:/Visual Studio Project/RPGGAME/RPGGAME/Content/Arial_16.spritefont</File>
+    <File>D:/Visual Studio Project/RPGGAME/RPGGAME/Content/baihu.dds</File>
+    <File>D:/Visual Studio Project/RPGGAME/RPGGAME/Content/Slot.png</File>
+    <File>D:/Visual Studio Project/RPGGAME/RPGGAME/Content/Gui1.jpg</File>
   </SourceFiles>
 </SourceFileCollection>
