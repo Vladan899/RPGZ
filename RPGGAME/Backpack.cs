@@ -14,7 +14,7 @@ namespace RPGGAME
         public int MaxSlots;
         public Backpack()
         {
-
+            MaxSlots = 16;
             
         }
 
@@ -26,7 +26,7 @@ namespace RPGGAME
         {
             if(Items.Count <= MaxSlots)
             {
-                foreach (var item in Items)
+                foreach (var item in Items.ToArray())
                 {
                     if(item.Item_Name == NewItem.Item_Name)
                     {

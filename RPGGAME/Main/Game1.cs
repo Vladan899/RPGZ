@@ -80,7 +80,7 @@ namespace RPGGAME
         }
 
 
-
+        public int rows;
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
@@ -89,8 +89,10 @@ namespace RPGGAME
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             
-            spriteBatch.Begin(SpriteSortMode.BackToFront,BlendState.AlphaBlend, SamplerState.PointClamp,DepthStencilState.None,RasterizerState.CullNone,null,null);
+            spriteBatch.Begin(SpriteSortMode.BackToFront,BlendState.AlphaBlend, SamplerState.AnisotropicClamp,DepthStencilState.None,RasterizerState.CullNone,null,null);
             inv.Draw(spriteBatch);
+            
+          
             
             spriteBatch.End();
             base.Draw(gameTime);
