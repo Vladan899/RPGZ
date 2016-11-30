@@ -42,12 +42,10 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ArmorItems.cs" />
     <Compile Include="Backpack.cs" />
     <Compile Include="BaseItem.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="PlayerBackPack.cs" />
-    <Compile Include="StatAttribute.cs" />
     <Compile Include="Usables\DrawColoredStrings.cs" />
     <Compile Include="Managers\ScreenManager.cs" />
     <Compile Include="Main\Game1.cs" />

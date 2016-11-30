@@ -14,11 +14,17 @@ namespace RPGGAME
         public int MaxSlots;
         public Backpack()
         {
-            MaxSlots = Inventory.InventorySlots;
+
+            
         }
+
+
+
+
+   
         public void Add(BaseItem NewItem,int Count)
         {
-            if(Items.Count <= Inventory.InventorySlots)
+            if(Items.Count <= MaxSlots)
             {
                 foreach (var item in Items)
                 {

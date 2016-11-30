@@ -20,8 +20,8 @@ namespace RPGGAME
             Null,
 
         }
-
-      
+        public ItemClass ItemType;
+        public Rectangle BoundingBox { get; set; }
         public Texture2D ItemTexture { get; set; }
         public string Item_Name { get; set; }
         public Rectangle SourceRectangle { get; set; }
